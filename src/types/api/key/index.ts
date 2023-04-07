@@ -1,12 +1,14 @@
-import { ApiKey } from '@prisma/client'
-import { ZodIssue } from 'zod'
+// import { ApiKey } from '@prisma/client'
+// import { ZodIssue } from 'zod'
 
-export interface CreateApiData {
-  error: string | ZodIssue[] | null
-  createdApiKey: ApiKey | null
-}
+// export interface CreateApiData {
+//   error: string | ZodIssue[] | null
+//   createdApiKey: ApiKey | null
+// }
 
-export interface RevokeApiData {
-  error: string | ZodIssue[] | null
-  success: boolean
-}
+// export interface RevokeApiData {
+//   error: string | ZodIssue[] | null
+//   success: boolean
+// }
+
+export {}
