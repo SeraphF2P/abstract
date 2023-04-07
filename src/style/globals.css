@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  .dark {
+    --primary: 67, 56, 202; 
+    --btn-hover: 77, 66, 212;
+    --btn-muted: 99, 102, 241;
+  }
+  .light {
+    --primary: 185, 28, 28;
+    --btn-hover:195, 38, 38;
+    --btn-muted: 239, 68, 68;
+  }
+  .neon {
+    --primary: 179, 255, 23;
+    --btn-hover: 166, 242, 10;
+    --btn-muted: 212, 255, 122;
+  }
+ 
+
+/* .form-field {
+  @apply w-full rounded border-gray placeholder-gray shadow focus:ring-2 valid:focus:text-cyan valid:focus:ring-cyan invalid:focus:border-transparent invalid:focus:ring-red;
+}
+.form-error {
+  @apply absolute left-0 top-full p-1 text-xs font-bold text-red;
+} */
+.remove_scroll_bar {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.remove_scroll_bar::-webkit-scrollbar {
+  display: none;
+}
+html,
+body,
+#root {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none;
+}
