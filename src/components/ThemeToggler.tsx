@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useTheme } from "next-themes";
 
-import { Icons } from "@/components/Icons";
+import  Icons  from "@/components/Icons";
 import Btn from "@/components/Btn";
 
 export default function ThemeToggle() {

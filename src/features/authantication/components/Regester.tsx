@@ -1,21 +1,21 @@
+"use client";
 
-"use client"
-import Btn from '@/components/Btn'
-import { useGoogleAuth } from '../hooks/useGoogleAuth'
-import {} from "next"
+import type { Session } from "@prisma/client";
+import * as React from "react";
+import { FC } from "react";
+import SignInBtn from "./SignInBtn";
+import SignOutBtn from "./SignOutBtn";
 
-const Regester = () => {
-    const {signUp,isSigningUp,logIn,islogingIn} = useGoogleAuth()
-  return (
-    <>
-      <Btn onClick={signUp} disabled={isSigningUp}>
-        sign up
-      </Btn>
-      <Btn onClick={logIn} disabled={islogingIn}>
-       login
-      </Btn>
-    </>
-  );
+
+
+interface RegesterProps extends React.HTMLAttributes<HTMLDivElement> {
+  session : Session | null
 }
 
-export default Regester
+const Regester: FC<RegesterProps> = ({ className, session }) => {
+
+  return session ? <SignOutBtn /> : <SignInBtn />;
+
+};
+
+export default Regester;

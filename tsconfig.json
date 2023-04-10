@@ -26,6 +26,7 @@
       "@/lib/*": ["./src/lib/*"],
       "@/prisma/*": ["./prisma/client.js/*"],
       "@/style/*": ["./src/style/*"],
+      "@/types/*": ["./src/types/*"],
       "@/authantication/*": ["./src/features/authantication/index"]
     }
   },

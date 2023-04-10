@@ -98,7 +98,7 @@ const Btn = forwardRef<HTMLButtonElement, BtnProps>(
         }}
         className={cn(
           btnVariants({ variant, size,shape, className }),
-          hasStatus && status  
+          hasStatus && status 
         )}
         {...props}
       >
@@ -109,5 +109,5 @@ const Btn = forwardRef<HTMLButtonElement, BtnProps>(
     );
   }
 );
-Btn.displayName = "Button";
+Btn.displayName = "Btn";
 export default Btn;
