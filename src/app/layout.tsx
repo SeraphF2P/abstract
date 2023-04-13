@@ -26,7 +26,6 @@ export default async function RootLayout({
           <Toaster  position="bottom-right" />
           {children}
         </ThemeProvider>
-        <div className="h-40 md:hidden" />
       </body>
     </html>
   );

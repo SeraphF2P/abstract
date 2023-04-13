@@ -1,4 +1,3 @@
-
 import Btn from "@/components/Btn";
 import { NotifyBtn } from "@/components/test";
 import ThemeToggler from "@/components/ThemeToggler";
@@ -6,7 +5,8 @@ import { Session } from "@prisma/client";
 import { getServerSession } from "next-auth";
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";
-import { Regester } from "../features/authantication";
+import { Regester } from "@/authantication";
+import { SignUp } from "@/authantication";
 import { authOptions } from "../lib/auth";
 const inter = Inter({
   subsets: ["latin"],
@@ -14,25 +14,28 @@ const inter = Inter({
   weight: ["400", "500", "800"],
 });
 
-
-
-const Wrapper = ({children,title}:{children : ReactNode,title :string})=>{
+const Wrapper = ({
+  children,
+  title,
+}: {
+  children: ReactNode;
+  title: string;
+}) => {
   return (
-    <div className=" relative flex flex-grow items-center flex-wrap gap-8  justify-around border border-slate-700/80 p-8     dark:border-slate-100/80      ">
+    <div className=" group:  relative flex flex-grow flex-wrap items-center justify-around gap-8   border border-slate-700/80 p-8     dark:border-slate-100/80      ">
       {children}
-      <span className=" absolute bottom-0 left-0 w-full py-1 text-center">
+      <span className="absolute bottom-0 left-0 w-full overflow-hidden py-1 text-center  animate-in  fade-in-50 slide-in-from-bottom-5 duration-700">
         {title}
       </span>
     </div>
   );
-}
-
+};
 
 export default async function Home() {
-  const session :Session |null  = await getServerSession(authOptions);
+  const session: Session | null = await getServerSession(authOptions);
 
   return (
-    <main className={`${inter.variable} grid h-screen  font-inter `}>
+    <main className={`${inter.variable} grid min-h-screen p-8 font-inter `}>
       <div className=" m-auto flex w-[80vw]   flex-wrap bg-gray-300 dark:bg-gray-700 ">
         <Wrapper title="fill/disabled">
           <Btn variant="fill">click</Btn>
@@ -73,10 +76,13 @@ export default async function Home() {
           </NotifyBtn>
         </Wrapper>
         <Wrapper title="Regester">
-         <Regester session={session}/>
+          <Regester session={session} />
         </Wrapper>
         <Wrapper title="theme provider">
           <ThemeToggler />
+        </Wrapper>
+        <Wrapper title="form elements">
+          <SignUp />
         </Wrapper>
       </div>
     </main>

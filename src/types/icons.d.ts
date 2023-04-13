@@ -1,4 +1,4 @@
-import type  {ForwardRefExoticComponent,SVGProps,SVGSVGElement} from "react";
+import type  {SVGProps,SVGSVGElement} from "react";
 
 
 declare module "@/components/Icons" {

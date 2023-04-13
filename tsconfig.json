@@ -27,7 +27,8 @@
       "@/prisma/*": ["./prisma/client.js/*"],
       "@/style/*": ["./src/style/*"],
       "@/types/*": ["./src/types/*"],
-      "@/authantication/*": ["./src/features/authantication/index"]
+      "@/myFormik/*": ["./src/components/myFormik/*"],
+      "@/authantication": ["./src/features/authantication/index.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

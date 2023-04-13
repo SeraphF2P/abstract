@@ -7,7 +7,6 @@ import { notFound } from "next/navigation"
 
 export default async ()=>{
 const user = await getServerSession(authOptions)
-console.log(user)
 if(!user) notFound()
     return < >
 <h1>home</h1>

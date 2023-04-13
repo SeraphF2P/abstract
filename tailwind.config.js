@@ -46,14 +46,12 @@ module.exports = {
       }
     },
   },
-  // corePlugins: {
-  //   aspectRatio: false,
-  // },
   plugins: [
     require("tailwindcss-brand-colors"),
-    // require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
+    require('tailwindcss-animate'),
+
     require('@headlessui/tailwindcss')({ prefix: 'ui' })
   ],
 };
