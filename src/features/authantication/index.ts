@@ -1,5 +1,5 @@
 import Regester from "./components/Regester";
-import SignUp from "./components/SignUp";
+import SignUp from "./forms/SignUp";
 
 
 
